@@ -1,0 +1,8 @@
+//Coders and Founders application assigments
+
+//L8#2
+var stringToNumber = function (str) {
+  let lastInx = str.length - 1;
+  return (val = str.substring(1, lastInx));
+  console.log(val);
+};
