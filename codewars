@@ -1,8 +1,16 @@
 //Coders and Founders application assigments
 
-//L8#2
+//L8#2 주어진 str 첫,마지막 letter 빼기
 var stringToNumber = function (str) {
   let lastInx = str.length - 1;
   return (val = str.substring(1, lastInx));
   console.log(val);
 };
+
+
+//L8#3 숫자 양수로 만들고 더하기
+
+  let arr = [...num];
+  let val = arr.map((number) => Math.abs(number));
+  let sum = val.reduce((a, b) => a + b);
+  console.log(sum);
