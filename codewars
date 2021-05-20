@@ -8,9 +8,34 @@ var stringToNumber = function (str) {
 };
 
 
-//L8#3 숫자 양수로 만들고 더하기
+//L8#3 숫자 양수로 만들고 더하기 --------------------------->  THIS NEEDS TO BE DONE AGAIN!
 
   let arr = [...num];
   let val = arr.map((number) => Math.abs(number));
   let sum = val.reduce((a, b) => a + b);
   console.log(sum);
+  
+  //--> default 는 0 이 나오게 다시 해줌!
+  
+    let val = [...num];
+
+  if (val.length === 0) {
+    val.push(0);
+    return val[0];
+  } else {
+    console.log(val);
+    let new1 = val.map((number) => Math.abs(number));
+    let sum = new1.reduce((a, b) => a + b);
+    console.log(sum);
+  }
+  
+  //L8#4  parameter s를 n번만큼 반복해서 return! 
+  
+  function repeatStr (n, s) {
+  let arry = new Array(n).fill(s);
+  let val = arry.join('');
+  return val;
+}
+  
+  
+ //L8#5
