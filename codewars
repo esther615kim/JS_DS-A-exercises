@@ -53,5 +53,15 @@ var stringToNumber = function (str) {
   
   //L6 #2 Replace With Alphabet Position 
   
+  //L5 0 뒤로 옮기기
+  
+  
+    let val = input;
+  let arry1 = val.filter((item) => item === 0);
+  let arry2 = val.filter((item) => item !== 0);
+
+  const newArry = [...arry2, ...arry1];
+  return newArry;
+}
   
   
