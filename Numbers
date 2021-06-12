@@ -1,0 +1,13 @@
+#1
+두 숫자의 차이 구하기 (to get the difference between two numbers)
+
+#A1
+function diff (num1, num2) {
+  if (num1 > num2) {
+    return num1 - num2
+  } else {
+    return num2 - num1
+  }
+}
+
+#2 
