@@ -1,0 +1,60 @@
+//2021.06.20
+
+// Lv.1 소수만들기
+
+//누군가의 답
+function solution(numbers) {
+    var answer = 0;
+    var arr = [];
+    for(var i = 0; i < numbers.length; i++){
+        var tmp = [];
+        tmp = getPermutations(numbers.split(""),i+1);
+        tmp = tmp.map((val) => Number(val.join("")));
+        arr = arr.concat(tmp);
+    }
+    
+    //중복되는 값들 제거
+    arr = arr.filter((val,index,arr) => index == arr.indexOf(val));
+    //소수가 아닌 값들 제거
+    arr = arr.filter(function(val){
+        var a = "";
+        prime(val) == false ? a = false : a = true;
+        return a;
+    });
+    
+    return arr.length;
+    
+    //순열 알고리즘
+    function getPermutations(arr, selectNumber) {
+      const results = [];
+      if (selectNumber === 1) return arr.map((value) => [value]);
+
+      arr.forEach((fixed, index, origin) => {
+        var rest = [...origin.slice(0, index), ...origin.slice(index+1)];
+        var permutations = getPermutations(rest, selectNumber - 1);
+        var attached = permutations.map((permutation) => [fixed, ...permutation]);
+        results.push(...attached);
+      });
+
+      return results; // 결과 담긴 results return
+    };
+    
+    //소수면 true 아니면 false 반환하는 함수
+    function prime(num){
+        var cnt = 0;
+        if(num > 1){
+            for(var i = 1; i <= num; i++){
+                if(num%i == 0)
+                    cnt++;
+                if(cnt > 2)
+                    return false;
+            }
+            if(cnt <= 2)
+                return true;
+        }else
+            return false;
+    }
+}
+
+
+//my answer!
