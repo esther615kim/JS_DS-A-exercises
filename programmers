@@ -2,7 +2,7 @@
 
 // Lv.1 소수만들기
 
-//누군가의 답
+//Possible Answer
 function solution(numbers) {
     var answer = 0;
     var arr = [];
