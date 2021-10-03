@@ -1,0 +1,28 @@
+A greedy algorithm makes whatever choice seems best at the moment,
+and solves the subproblems that arise later.
+
+// coin change
+You are given coins of different denominations and a total amount of 
+money. Write a function that returns the smallest set of coins that 
+sums to that amount.
+
+//AK
+
+function makeChange(amount, coins, bag = []) {
+  if (amount === 0) return bag
+  let largestCoin = getLargestCoin(amount, coins)
+  return makeChange(amount - largestCoin, coins, bag.concat([largestCoin]))
+}
+
+function getLargestCoin(amount, coins) {
+  let sortedCoins = coins.sort((a, b) =\> a - b)
+  for (let i = sortedCoins.length - 1; i \>= 0; i--) {
+    if (sortedCoins[i] \<= amount) return sortedCoins[i]
+  }
+  throw new Error('no coin that divides amount')
+}
+
+console.log(
+  makeChange(42, [1, 5, 10, 25])
+)
+// [25, 10, 5, 1, 1]
