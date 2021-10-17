@@ -1,0 +1,10 @@
+
+
+//first thought => didn't work
+words.join(' ') 
+
+function smash (words) {
+    for (i = 0; i > words.length; i++) {
+    words.splice(" ");}
+    return words.join(" ");
+}
