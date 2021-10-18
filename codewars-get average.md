@@ -22,6 +22,6 @@ my answer//not working on codewars but working on codesandbox
 ```js
 function getAverage(marks) {
 
-  return marks.reduce((a,b)=>a+b)/marks.length;
+  return Math.floor(marks.reduce((a,b)=>a+b)/marks.length);
 }
 ```
