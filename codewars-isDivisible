@@ -1,7 +1,0 @@
-
-my answer//not working on codewars but working on codesandbox
-
-function isDivisible(n, x, y) {
-    if ((n % x) | (n & x)) return false;
-  return true;
-}
