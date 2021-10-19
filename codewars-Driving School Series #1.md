@@ -24,7 +24,7 @@ If no students passed the test that month, return 'No pass scores registered.'.
 my answer
 ```js
 function passed(list) {
-  //edge case
+  //fail case
   if(list.filter((item) => item < 18) //return "No pass scores registered.";
   
   //filter => reduce sum => /list.length => round
