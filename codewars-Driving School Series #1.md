@@ -19,7 +19,7 @@ If no students passed the test that month, return 'No pass scores registered.'.
 
 그렇게 할 수 있는 함수를 작성하십시오.
 해당 달에 시험에 합격한 학생이 없으면 '등록된 합격 점수가 없습니다.'를 반환합니다.
-'
+`
 
 my answer
 ```js
