@@ -25,7 +25,7 @@ my answer
 ```js
 function passed(list) {
   //fail case
-  if(list.filter((item) => item < 18) //return "No pass scores registered.";
+  if(list.filter((item) => item <= 18) //return "No pass scores registered.";
   
   //filter => reduce sum => /list.length => round
   let passed = list.filter((item) => item <= 18);
