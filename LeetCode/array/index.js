@@ -1,5 +1,4 @@
 // #26
-function removeDuplicates(arr){
 function removeDuplicates(arr) {
   // edgecase
   if (!arr) return 0;
