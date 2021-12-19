@@ -1,6 +1,6 @@
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
- 
+```js
 Example 1:
 
 Input: nums = [1,2,3,4,5,6,7], k = 3
@@ -23,3 +23,4 @@ Constraints:
 1 <= nums.length <= 105
 -231 <= nums[i] <= 231 - 1
 0 <= k <= 105
+```
