@@ -82,3 +82,18 @@ function singleNumber(nums){
     }
     return result[0];
 }
+
+//leetCode 220
+function containDuplicate(nums){
+    if (!Array.isArray(nums)) throw new Error("invalid passed value");
+
+    if (nums.length === 1) return false;
+  
+    nums.sort((a, b) => a - b);
+    for (let i = 0; i < nums.length; i++) {
+      if ((nums[i] === nums[i - 1]) | (nums[i] === nums[i + 1])) return true;
+    }
+    console.log("all unique");
+    return false;
+
+}
