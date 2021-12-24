@@ -109,3 +109,31 @@ var twoSum = function(nums, target) {
     }
   }
 };
+
+// 283
+function removeZeroes(nums) {
+  // #1
+  // let zeros = [];
+  // //for-loop, if 0 found, splice => push
+  // for (let i = 0; i < nums.length; i++) {
+  //   if (nums[i] === 0) {
+  //     nums.splice(nums[i - 1], 1);
+  //     zeros.push(0);
+  //   }
+  // }
+  // nums = [...nums, ...zeros])); it is not working in leetCode
+  // nums.concat(zeros);
+
+  // #2
+  let lenth = nums.length;
+
+  for (let i = 0; i < lenth; i++) {
+    if (nums[i] === 0) {
+      nums.splice(i, 1);
+      nums.push(0);
+      i--;
+      lenth--;
+      console.log(nums);
+    }
+  }
+}
