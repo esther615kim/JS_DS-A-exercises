@@ -137,3 +137,23 @@ function removeZeroes(nums) {
     }
   }
 }
+
+// leetCode #344
+function reverseString(array) {
+  // #1
+  console.log(array.reverse());
+  // #2
+  let reversed = [];
+  for (let i = array.length - 1; i >= 0; --i) {
+    reversed.push(array[i]);
+  }
+  return reversed;
+  // #3
+  // let index = 0;
+  // for (let i = array.length; i > -1; i--) {
+  //   console.log(array.length, array[i]);
+  //   array.splice(index, 1, array[i]);
+  //   index++;
+  // }
+  // console.log(array);
+}
