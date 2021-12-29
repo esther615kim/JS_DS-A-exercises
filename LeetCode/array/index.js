@@ -157,3 +157,30 @@ function reverseString(array) {
   // }
   // console.log(array);
 }
+
+// 387
+function firstUniqChar(string) {
+  if (!string || !string.length) return -1;
+  let charCount = {}; // contains letter & count
+
+  // charCount obj
+  for (let i = 0; i < string.length; i++) {
+    const char = string[i];
+    charCount[char] = charCount[char] + 1 || 1; //!!
+  }
+  // console.log(charCount);
+
+  // check for unique character
+  console.log(Object.values(charCount));
+
+  for (let i = 0; i < string.length; i++) {
+    const char = string[i];
+    if (charCount[char] === 1) return i;
+  }
+  return -1;
+}
+
+console.log(firstUniqChar("eheiei")); // 0
+
+//time : O(n) 2 for loops
+//space : 0(1) hashmap, only lower cases
