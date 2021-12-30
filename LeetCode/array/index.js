@@ -183,4 +183,18 @@ function firstUniqChar(string) {
 console.log(firstUniqChar("eheiei")); // 0
 
 //time : O(n) 2 for loops
-//space : 0(1) hashmap, only lower cases
+//space : O(1) hashmap, only lower cases
+
+
+// 28 
+var strStr = function(haystack, needle) {
+    // return 0 when needle is 0
+    if(!needle) return 0;
+    
+    // return the first index of needle in haystack
+    return haystack.indexOf(needle);
+    
+};
+
+//time : O(1)  
+//space : O(1)
