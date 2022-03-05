@@ -24,3 +24,13 @@ Constraints:
 -231 <= nums[i] <= 231 - 1
 0 <= k <= 105
 ```
+
+#A1
+```
+  for (let i = 1; i <= k; i++) {
+    const popped = nums.pop();
+    nums.unshift(popped);
+  }
+  return nums;
+  
+  ```
