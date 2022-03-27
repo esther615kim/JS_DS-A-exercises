@@ -50,6 +50,7 @@ var plusOne = function(array) {
 
 
 `AK2`
+```js
     for(let i = digits.length-1;i>=0;i--){
         digits[i]++;
         if(digits[i]<10){
@@ -63,3 +64,4 @@ var plusOne = function(array) {
     // 99 ->100
     digits.unshift(1);
     return digits;
+```
