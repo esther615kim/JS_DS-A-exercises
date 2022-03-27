@@ -34,3 +34,32 @@ Constraints:
 digits does not contain any leading 0's.
 
 ```
+
+
+`AK1` 
+
+```js
+var plusOne = function(array) {
+ const input1 = parseInt(array.join("")) + 1;
+  const result = String(input1).split("");
+  return result;
+}
+```
+
+![image](https://user-images.githubusercontent.com/75744588/160283212-59efa964-161d-45ba-b535-bc2bc2b1c863.png)
+
+
+`AK2`
+    for(let i = digits.length-1;i>=0;i--){
+        digits[i]++;
+        if(digits[i]<10){
+            return digits;
+        }
+        else{ //49
+            digits[i] = 0;
+            
+        }
+    }
+    // 99 ->100
+    digits.unshift(1);
+    return digits;
