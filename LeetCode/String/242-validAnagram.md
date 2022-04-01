@@ -19,3 +19,12 @@ Constraints:
 s and t consist of lowercase English letters.
  
  ```
+-`AK1`
+```js
+var isAnagram = function(s, t) {
+  //edge case
+  if (s.length !== t.length) return false;
+  return s.split("").sort().join() === t.split("").sort().join() ? true : false;
+};
+
+```
