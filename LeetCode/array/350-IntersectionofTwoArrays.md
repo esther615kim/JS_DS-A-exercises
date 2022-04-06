@@ -23,3 +23,8 @@ Constraints:
  ```
  
 `AK1`
+Runtime error
+```js
+    const sharedNumbs = nums1.filter(value=> numbs2.includes(value));
+    return sharedNumbs;
+```
