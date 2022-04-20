@@ -23,4 +23,24 @@ strs[i] consists of only lower-case English letters.
 
 ```
 
-`AK1`
+`AK1 JavaScript`
+```js
+var longestCommonPrefix = function(strs) {
+   let prefix = "";
+  // edge case
+  if (strs.length === 0) return prefix;
+  // single character
+  for (let i = 0; i < strs[0].length; i++) {
+    const character = strs[0][i];
+    // check each word
+    for (let j = 0; j < strs.length; j++) {
+      if (strs[j][i] !== character) return prefix;
+    }
+    prefix = prefix + character;
+  }
+  return prefix;
+};
+
+```
+
+`AK2 Phython`
