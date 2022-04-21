@@ -27,4 +27,25 @@ Constraints:
 haystack and needle consist of only lowercase English characters.
 ```
 
-`AK1`
+`AK1 JavaScript`
+```js
+var strStr = function(haystack, needle) {
+    // edge case
+    if(needle ==="") return 0;
+    
+    // check haystack -i
+    for(let i =0; i <= haystack.length-needle.length; i++){
+        // check matching
+        let j=0;
+        for(; j<needle.length; j++){
+            if(needle[j]!==haystack[i+j]) break;
+        }
+        // when matching, return i
+        if(j===needle.length) return i;
+    }
+    // matching not found 
+    return -1;
+};
+```
+
+`AK2 Python`
