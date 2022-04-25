@@ -21,3 +21,17 @@ n == matrix.length == matrix[i].length
 ```
 
 `AK1 in JS`
+```js
+var rotate = function(matrix) {
+    for (let row=0; row<matrix.length;row++){
+        // swap row and column
+        for (let col= row; col<matrix[0].length; col++){
+            [matrix[row][col],matrix[col][row]] = [matrix[col][row],matrix[row][col]];
+        }
+    }
+    // reverse each array
+    for(let array of matrix){
+        array.reverse();
+    }
+};
+```
