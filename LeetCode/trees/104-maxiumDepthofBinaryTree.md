@@ -22,4 +22,9 @@ The number of nodes in the tree is in the range [0, 104].
 -100 <= Node.val <= 100
 
 `AK1 in JS`
+
+var maxDepth = function(root) {
+    if(!root) return 0;
+    return 1+ Math.max(maxDepth(root.right), maxDepth(root.left));
+};
 ```
