@@ -25,3 +25,20 @@ Constraints:
 1 <= nums.length <= 3 * 104
 -3 * 104 <= nums[i] <= 3 * 104
 Each element in the array appears twice except for one element which appears only once.
+
+`AK1 in JS`
+```js
+var singleNumber = function(nums) {
+    // create hashmap of an array
+    let obj = {} 
+    // count of all nums
+    for(let i of nums){ // i => element in nums
+        if(!obj[i]) obj[i] =1;
+        else obj[i]++
+    }
+    // check for single count num
+    for(let i in obj){
+        if(obj[i]===1) return i;
+    }
+};
+```
