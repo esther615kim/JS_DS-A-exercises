@@ -32,3 +32,20 @@ Constraints:
 
 1 <= prices.length <= 3 * 104
 0 <= prices[i] <= 104
+
+
+`AK1 in JS`
+```js
+var maxProfit = function(prices) {
+    let profit = 0
+
+    for(let i =0; i<prices.length; i++){
+        // buy stock when there is profit
+        if(prices[i+1] > prices[i]){
+            profit = profit + (prices[i+1]-prices[i])
+        }
+    }
+    return profit;
+};
+```
+
