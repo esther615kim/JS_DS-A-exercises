@@ -25,6 +25,7 @@ Constraints:
 ```
 
 `AK in JS`
+```js
 var reverse = function(x) {
     const limit = 2147483648;
     const negativeTest = x<0? -1:1;
@@ -37,3 +38,4 @@ var reverse = function(x) {
         return result > limit? 0: result * negativeTest
     }  
 };
+```
