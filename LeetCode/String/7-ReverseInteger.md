@@ -25,3 +25,15 @@ Constraints:
 ```
 
 `AK in JS`
+var reverse = function(x) {
+    const limit = 2147483648;
+    const negativeTest = x<0? -1:1;
+    
+    x = x.toString();
+    let result ="";
+    for(let i of x){
+        result = i + result;
+        result = parseInt(result);
+        return result > limit? 0: result * negativeTest
+    }  
+};
