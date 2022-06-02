@@ -11,3 +11,7 @@ If you see a `for` loop sanning from '0' to 'array.length', it's 'n' or `linear 
 `n^2` : Evrey element in a collection has to be compared to every other element, the handskake problem
 
 `2^n` : If you add a single element to a collection, the processiong power required doubles
+
+
+### Big-O complexity chart 
+https://www.bigocheatsheet.com/
