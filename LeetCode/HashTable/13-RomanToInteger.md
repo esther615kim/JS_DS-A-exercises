@@ -47,3 +47,44 @@ Constraints:
 1 <= s.length <= 15
 s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+
+
+`AK1 in JS`
+
+```js
+var romanToInt = function(s) {
+    let sum = 0;
+    for (let i =0; i<s.length; i++){
+        let prev =s[i-1];
+        switch(s[i]){
+            case "I": sum += 1;
+                break;
+            case "V": 
+                // check for IV
+                sum = (prev === "I")? sum + 3 : sum + 5;
+                break;
+            case "X": 
+                // IX
+                sum = (prev === "I")? sum + 8 : sum + 10;
+                break;
+            case "L": 
+                // XL
+                sum = (prev === "X")? sum + 30 : sum + 50;
+                break;
+            case "C": 
+                // XC
+                sum = (prev === "X")? sum + 80 : sum + 100;
+                break;
+            case "D": 
+                // CD
+                sum = (prev === "C")? sum + 300 : sum + 500;
+                break;
+            case "M": 
+                // CM
+                sum = (prev === "C")? sum + 800 : sum + 1000;
+                break;
+        }
+    }
+    return sum;
+};
+```
