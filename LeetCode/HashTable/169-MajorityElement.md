@@ -24,3 +24,25 @@ n == nums.length
 `Follow-up: Could you solve the problem in linear time and in O(1) space?`
 
 `AK in JS`
+
+```js
+var majorityElement = function(nums) {
+    // early return
+    if (nums.length ===1) {
+        return nums[0];
+    }
+    
+    const hashtable = {};
+    let half = nums.length/2;
+    let ht = {}
+    
+    // create a hashtable 
+    for (const num of nums) {
+        hashtable[num] = hashtable[num] + 1 || 1;
+    }
+    // check for manority elem
+    for (const key in hashtable) {
+        if (hashtable[key] > half) return key;
+    }
+};
+```
