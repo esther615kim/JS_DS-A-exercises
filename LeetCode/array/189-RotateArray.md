@@ -34,3 +34,16 @@ Constraints:
   return nums;
   
   ```
+  
+  
+#AK2
+```
+var rotate = function(nums, k) {
+  k %= nums.length;
+  if (k !== 0){ 
+    var tmp = nums.slice(-k);
+    nums.splice(-k, k);
+    Array.prototype.unshift.apply(nums, tmp);
+  }
+};
+```
